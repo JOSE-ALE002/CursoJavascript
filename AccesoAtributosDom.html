@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Atributos Dom</title>
+</head>
+
+<style>
+	div{
+		width: 200px;
+		height: 200px;
+		background: #dddddd;
+		display: inline-block;
+		margin-right: 10px;
+		border: 1px solid #AAAAAA;
+	}
+
+	.azul{
+		background: #0074D9;
+		border: 1px solid #000;
+	}
+
+
+	.rojo{
+		background: red;
+		border: 1px solid #000;
+	}
+</style>
+<body>
+	<section id="contenedor">
+		<div class=""></div>
+		<div class=""></div>
+	</section>
+
+	<script>
+		var elemento = document.createElement("div");
+
+		var padre = document.getElementById("contenedor");
+
+		elemento.setAttribute("class", "azul");
+		padre.insertBefore(elemento, document.getElementsByTagName('div')[0]);
+	</script>
+</body>
+</html>

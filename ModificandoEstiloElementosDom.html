@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style>
+	.thumb{
+		width: 200px;
+		transition: 300ms all ease;
+	}
+
+	.grande{
+		width: 400px;
+	}
+
+	.titulo{
+		border: 1px solid navy;
+		background: #ccc;
+		padding: 10px;
+	}
+
+	.tituloGrande{
+		font-size: 60px;
+	}
+</style>
+<body>
+	<h1 id="encabezado" class="">Soy un encabezado</h1>
+	
+	<script>
+		var topic = document.getElementById("encabezado");
+		document.write("<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis natus perspiciatis excepturi labore, praesentium dolores odit necessitatibus, placeat quos explicabo facere? Ex consectetur veniam iure ullam, cupiditate modi quis, quam.</p>");
+
+		document.write("<h1>Hola Mundo</h1>")
+
+
+		var ti = document.getElementsByTagName('h1');
+
+		// Cambiar nombre de las clases del elemento si este posee mas de uno
+			// topic.className = topic.replaceChild("tituloGrande", "");
+
+		// FORMA ALTERNATIVA DE CAMBIAR LOS ATRIBUTOS DE UN ELEMENTO	
+		// topic.style.background = "red";
+		// topic.style.color = "white";
+	</script>
+</body>
+</html>

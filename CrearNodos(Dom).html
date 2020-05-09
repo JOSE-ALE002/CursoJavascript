@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="titulo">Este es nuestro titular</h1>
+
+	<div id="subtitulo"></div>
+	<p>
+		1. Lorem ipsum dolor <b>sit amet</b>, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<p id="segundo">
+		2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<p>
+		3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<script>
+
+		//ACCEDER A LOS ELEMENTOS POR ETIQUETA
+
+		var ElementosP = document.getElementsByTagName('p');
+		//.innerHTML----------->Muestra todo el codigo HTML dentro de la etiqueta
+		//.innerHTML = "Hola Mundo" ----------->Modifica el elemento 0 de los parrafos
+
+
+		//ACCEDER A LOS ELEM ENTOS POR "ID"
+
+		var Elementoid = document.getElementById("segundo");
+
+		//CREACION DE NODOS
+
+		//1. Crear el elemento
+		var elemento = document.createElement("h2");
+		//2. Crear un nodo de texto
+		var contenido = document.createTextNode("Este es el segundo titulo");
+		//3. Añadir el nodo de texto al elemento
+		elemento.appendChild(contenido);
+		//4. Agregar atributos al elemento
+		elemento.setAttribute("align", "center");
+
+		//5. Agregar el elemento al documento
+		//agregaremos el elemento dentro del elemento div id="subtitulo"
+		document.getElementById("subtitulo").appendChild(elemento);
+
+	</script>
+</body>
+</html>

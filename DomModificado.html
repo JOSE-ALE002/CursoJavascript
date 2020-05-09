@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Modificado</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">Lorem ipsum dolor sit amet</li>
+		<li>tempor incididunt ut labor</li>
+	</ol>
+	<script>
+//----------------------------------------------------------------------------------------------------------
+		/* CREANDO ELEMENTOS EN POSICIONES ARBITRARIAS
+
+		var elemento = document.createElement("li");
+		var contenido = document.createTextNode("Nuevo Texto");
+
+		//Formas de acceder al elemento padre "ol"
+		
+		var padre = document.getElementById("lista");
+		//var padre = document.getElementsByTagName("li")[0].parentNode;
+
+		//Nodos de referencia
+		var primerElemento = document.getElementsByTagName("li")[1];
+
+		elemento.appendChild(contenido);
+
+		//AGREGAMOS EL ELEMENTO AL FINAL DE LA LISTA
+		//padre.appendChild(elemento);
+
+		//AGREGAMOS EL ELEMENTO AL INICIO DE LA LISTA
+		padre.insertBefore(elemento, primerElemento);*/
+//-------------------------------------------------------------------------------------------------------------
+
+		//MODIFICANDO ELEMENTOS
+		var primerElemento = document.getElementById("primero");
+
+		//FORMAS DE MODIFICAR TEXTO
+		primerElemento.textContent = "Hola Mundo";
+
+		//primerElemento.innerHTML = "Nuevo Texto  <i>- Jose Alejadro</i>"; // ejecuta las etiquetas de marcado y el textContent no lo hace.
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EjemploClase</title>
+	<style>
+
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body{
+			background: #AFAFA7;
+		}
+
+		div{
+			width: 80%;
+			height: auto;
+			margin: auto;
+			background: #E5D4D4;
+			margin-top: 20px;
+			border-style: solid;
+		}
+
+		h1, h2{
+			color: purple;
+			text-align: center;
+			
+		}
+
+		header{
+			padding: 25px;
+			background: #CACA13;
+		}
+
+		p{
+			text-align: justify;
+			padding: 25px;
+			color: blue;
+		}
+
+		#absolutas #parrafo1{
+			text-align: center;
+			color: black;
+			font-size: 1in;
+		}
+
+		#absolutas #parrafo2{
+			text-align: center;
+			color: black;
+			font-size: 2cm;
+		}
+
+
+		#absolutas #parrafo3{
+			text-align: center;
+			color: black;
+			font-size: 4mm;
+		}
+
+
+		#absolutas #parrafo4{
+			text-align: center;
+			color: black;
+			font-size: 12pt;
+		}
+
+
+		#absolutas #parrafo5{
+			text-align: center;
+			color: black;
+			font-size: 1pc;
+		}
+
+		#relative #parrafo1{
+			text-align: center;
+			color: black;
+			font-size: 2em;	
+		}
+
+		#relative #parrafo2{
+			text-align: center;
+			color: black;
+			font-size: 2rem;	
+		}
+
+		#relative #parrafo3{
+			text-align: center;
+			color: black;
+			font-size: 48px;	
+		}
+
+		footer{
+			background: blue;
+		}
+
+		footer p{
+			color: white;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<h1>Bienvendidos a HTML</h1>
+		</header>
+		<br>
+		<main>
+			<section id="absolutas">	
+				<h2>Unidades Absolutas</h2>
+			<!--<marquee width = 50%; height = 60px; align = BOTTOM;>Unidades absolutas</marquee> hOLA-->
+			<!--<marquee BEHAVIOR = SLIDE> HOLA MUNDO</marquee>
+				PROPEDADES DE MARQUEE TENEMOS: 
+				1. SCROLL--------es el que tiene por defecto
+				2. SLIDE---------va de un lado a otro y se detiene
+				3. ALTERNATIVE------va de un lado a otro sin parar-->
+				<p>
+					Una medida indicada mediante unidades absolutas está completamente definida, ya que su valor no depende de otro valor de referencia. A continuación se muestra la lista completa de unidades absolutas definidas por CSS y su significado:
+
+				    in, pulgadas ("inches", en inglés). Una pulgada equivale a 2.54 centímetros.
+				    cm, centímetros.
+				    mm, milímetros.
+				    pt, puntos. Un punto equivale a 1 pulgada/72, es decir, unos 0.35 milímetros.
+				    pc, picas. Una pica equivale a 12 puntos, es decir, unos 4.23 milímetros.
+				    <br><br>
+
+					A continuación se muestran ejemplos de utilización de unidades absolutas:
+				</p>
+
+				<p>* Ejemplo unidad "in" o "Pulgadas" con una medida de "1in"</p>
+				<p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<br>
+
+				<p>* Ejemplo unidad "cm" o "Centimetros" con una medida de "2cm"</p>
+				<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<br>
+
+				<p>* Ejemplo unidad "mm" o "Milimetros" con una medida de "4mm"</p>
+				<p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<br>
+
+				<p>* Ejemplo unidad "pt" o "Puntos" con una medida de "12pt"</p>
+				<p id="parrafo4">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<br>
+
+				<p>* Ejemplo unidad "pc" o "Picas" con una medida de "1pc"</p>
+				<p id="parrafo5">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<br>
+			</section>
+			<hr>
+
+			<section id="relative">
+				<h2 style=" margin-top: 20px;">Unidades Relativas</h1>
+					<p>
+						La unidades relativas, a diferencia de las absolutas, no están completamente definidas, ya que su valor siempre está referenciado respecto a otro valor. A pesar de su aparente dificultad, son las más utilizadas en el diseño web por la flexibilidad con la que se adaptan a los diferentes medios.<br><br>
+
+						A continuación se muestran las tres unidades de medida relativas definidas por CSS y la referencia que toma cada una para determinar su valor real:
+
+						    em, (no confundir con la etiqueta <em> de HTML) relativa respecto del tamaño de letra del elemento.
+						    ex, relativa respecto de la altura de la letra x ("equis minúscula") del tipo y tamaño de letra del elemento.
+						    px, (píxel) relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.
+						    <br><br>
+
+						Las unidades em y ex no han sido creadas por CSS, sino que llevan décadas utilizándose en el campo de la tipografía. Aunque no es una definición exacta, la unidad 1em equivale a la anchura de la letra M ("eme mayúscula") del tipo y tamaño de letra del elemento.
+						<br><br>
+
+						La unidad em hace referencia al tamaño en puntos de la letra que se está utilizando. Si se utiliza una tipografía de 12 puntos, 1em equivale a 12 puntos. El valor de 1ex se puede aproximar por 0.5 em.
+						<br><br>
+
+						Si se considera el siguiente ejemplo:
+					</p>
+
+					<p>* Ejemplo unidad "em" con una medida de "2em"</p>
+					<p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<br>
+
+					<p>* Ejemplo unidad "rem" con una medida de "2rem"</p>
+					<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<br>
+
+					<p>* Ejemplo unidad "px" con una medida de "48px"</p>
+					<p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</section>	
+		</main>
+		<footer>
+			<p>Jose Alejandro - ing. Sistemas Informaticos</p>
+		</footer>
+	</div>
+</body>
+</html>

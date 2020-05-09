@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="boton">Boton</button>
+	<a id="boton2" href="http://falconmasters.com">FalconMasters</a>
+	<input type="text" id="input">
+
+	<script>
+		(function(){ 
+			//1. MODELO DE EVENTOS ESTANDAR
+
+			var boton = document.getElementById("boton");
+
+			var boton2 = document.getElementById("boton2");
+
+			var saludo  = function(){
+				console.log("Focus :D");
+			}
+
+			var evitar = function(e){
+				console.log("Se evito ir a: " + boton2.href);
+
+				//Evita que se rediriga a la direccion encomendada
+				e.preventDefault();
+			}
+
+			var info = function(e){
+				console.log("Este es un tipo de evento de: " + e.type);
+			}
+
+			var info2 = function(e){
+				console.log("Este es un tipo de evento de: " + e.target);
+			}
+
+			// var saludo2  = function(){
+			// 	alert("Saludo2");
+			// }
+
+			//FORMA DE AGREGAR UNA ACCION LISTENER A UN BOTON
+
+
+		    //Focus--->Cuando ponemos el puntero del mouse en un imput tipo "text"
+		    // boton.addEventListener("focus", saludo);
+
+		    //blur---->Cuando ponemos el puntero del mouse en un input tipo "text" y salimos de el al dar Enter ahi se da la accion blur
+		    // boton.addEventListener("blur", saludo);
+
+		    //verifica si lo escrito en la caja de texto permanece igual sino esta igual se ejecuta la accion change que se refiere a que ya cambio su estado
+		    // boton.addEventListener("change", saludo);
+
+		    // boton.addEventListener("click", saludo2)
+		    //Podemos agregar cuantos eventos nosotros necesitemos
+
+		    //VERIFICAMOS EL TIPO DE EVENTO QUE OCURRE
+
+		    boton.addEventListener("click", info);
+
+
+		    boton.addEventListener("click", info2);
+
+		    boton2.addEventListener("click", evitar);
+
+
+			//FORMA ALTERNATIVA DE CREAR UNA ACCION LISTENER A UN BOTON
+
+			// boton.addEventListener("click", function(){
+			// 	console.log('Funciono! :D')
+			// })
+
+
+			//2. MODELO DE EVENTOS BASICO
+			//3. MODELO DE EVENTOS DE INTERNET EXPLORER
+
+
+		}())
+	</script>
+</body>
+</html>

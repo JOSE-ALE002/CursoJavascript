@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Javascript</title>
+</head>
+<body>
+	<form action="" name="formulario" method="get">
+		<!-- Explicar Require -->
+
+		<!-- Require es una validacion que trae HTML5 para validar que todos los elementos del formulario este llenos -->
+		<input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre">
+		<br>
+
+		<input type="radio" name="sexo" id="hombre" value="Hombre"> Hombre
+
+		<input type="radio" name="sexo" id="mujer" value="Mujer"> Mujer
+
+		<br>
+		<input type="checkbox" name="terminos" id="terminos"> Terminos y Condiciones
+		<br>
+
+		<label for="email">Email</label>
+		<input type="email" id="email" placeholder="Escribe un email">
+
+		<br>
+
+		<input type="submit" name="btn" id="btn" value="Enviar">
+	</form>
+
+	<script>
+		(function(){
+			// Accedemos a los formularios en el documento
+			//document.forms;
+
+			//Accedemos a los elementos dentro del formulario
+			// document.forms[0].elements
+
+			//Forma Alternativa
+			// document.formulario
+			// document.formulario.(elemento)
+
+			//PROPIEDADES DE LOS FORMULARIOS
+
+			//1. document.formulario.name ="";
+			//2. document.formulario.type
+			//3. document.formulario.nombre.type
+			//4. document.formulario.nombre.value
+
+			//autoapuntado del mouse automatico
+			//4. document.formulario.nombre.focus()
+
+			//VALIDACION DEL FORMULARIO
+
+			var formu = document.getElementsByName("formulario")[0];
+
+			var partes = formu.elements;
+
+			var boton = document.getElementById('btn');
+
+			var validarNombre = function(e){
+				if(formu.nombre.value == 0){
+					alert("Completa Campo Nombre");
+					e.preventDefault();
+
+				}
+			};
+
+			var validarRadio = function(e){
+				if(formu.sexo[0].checked == true || formu.sexo[1].checked == true){
+				}else{
+					alert("Completa Campo Sexo");
+					e.preventDefault();
+				}
+			};
+
+			var validarCheckbox = function(e){
+				if (formu.terminos.checked == false) {
+					alert("Completa Campo Terminos y Condiciones");
+					e.preventDefault();	
+				}
+			};
+
+			var validar = function(e){
+				validarNombre(e);
+				validarRadio(e);
+				validarCheckbox(e);
+			};
+
+			formu.addEventListener("submit", validar);
+
+		}())
+	</script>
+</body>
+</html>

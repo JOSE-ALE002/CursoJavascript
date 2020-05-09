@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ol id="lista">
+		<li>Lorem ipsum dolor</li>
+		<li>Lorem ipsum dolor</li>
+	</ol>
+
+
+	<script>
+		var elemento = document.createElement("li");
+		elemento.appendChild(document.createTextNode("Nuevo Texto Maniaco"));
+		var primerElemento = document.getElementsByTagName('li')[0];
+		var segundoElemento = document.getElementsByTagName('li')[1];
+
+		
+
+		//METODOS PARA CAMBIAR TEXTO DE UN NODO
+
+		//1. innerHTML cambia el texto pero ejecuta las etiquetas que se encuentren en el texto
+		primerElemento.innerHTML = "Este es innerHTML <i>Jose</i>";
+ 
+		//2. textContent: Ejecuta el texto plano de la etiqueta
+
+		segundoElemento.textContent = "Este es textContent <i>Jose</i>";
+
+		
+
+
+		//CAMBIAR CONTENIDO DE UN NODO
+		
+		var padre = document.getElementsByTagName("li")[1].parentNode;
+		padre.replaceChild(elemento, primerElemento);
+
+		
+		//ELIMINAR NODOS DEL DOM
+		// padre.removeChild(segundoElemento);
+
+	</script>
+
+</body>
+</html>

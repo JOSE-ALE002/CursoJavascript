@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<ol id="lista">
+		<li id="primero">Lorem ipsum dolor sit amet</li>
+		<li>tempor incididunt ut labor</li>
+	</ol>
+
+	<script>
+		
+		var elemento = document.createElement("li"), contenido = document.createTextNode("Nuevo texto chivo");
+		var parrafo = document.createElement("p");
+		elemento.appendChild(contenido);
+		parrafo.appendChild(document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nostrum laudantium soluta libero ipsum sed non quisquam laboriosam exercitationem dolore iusto, illum eius tempora est nam sint cumque neque consectetur!"));
+
+
+		//ACCEDEMOS AL PADRE DE LAS "LI" NO IMPORTA LA POSICION CONTAL EXISTA
+		// var padre = document.getElementsByTagName('li')[1].parentNode;
+
+		//ACCEDEMOS AL PADRE DE LAS "LI" ALTERATIVA
+		var padre2 = document.getElementById("lista");
+		// Agregamos al final de la lista
+		// padre2.appendChild(elemento);
+
+		hijo = document.getElementsByTagName('li')[1];
+
+		padre2.insertBefore(elemento, hijo);
+
+		//FORMA ALTERNATIVA DE AGREGAR NODO
+		// document.getElementById("lista").insertBefore(elemento, document.getElementsByTagName("li")[1]);
+
+		document.body.insertBefore(parrafo, padre2);
+	</script>
+	
+</body>
+</html>

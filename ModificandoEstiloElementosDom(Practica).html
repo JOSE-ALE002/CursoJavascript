@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style>
+	.thumb{
+		width: 200px;
+		transition: 300ms all ease;
+	}
+
+	.grande{
+		width: 400px;
+	}
+</style>
+<body>
+
+	<form action="">
+		<input type="button" value="Cambio de Tamaño" onclick="zoom()">
+	</form>
+
+	<img class="thumb" id="zoom" src="http://lorempixel.com/400/400/" width="400">
+	<script>
+		
+		var zoom = function(){
+			var image = document.getElementById("zoom");
+
+			if(image.className == "thumb"){
+				image.setAttribute("class", "thumb grande");	
+			}else{
+				image.setAttribute("class", "thumb");	
+			}
+		}
+	</script>
+</body>
+</html>
